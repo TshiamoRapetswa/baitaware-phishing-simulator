@@ -146,18 +146,6 @@ Fonts via **Google Fonts** (CDN).
 | ≤ 480px    | Stacked buttons, reduced padding, hidden brand text in header |
 | ≤ 360px    | Progress label hidden to save space            |
 
----
-
-## ✅ Rubric Compliance
-
-| Criteria         | Implementation |
-|-----------------|----------------|
-| Functionality    | 10 scenarios, choice buttons, per-answer feedback, score tracking |
-| Design & UI      | Syne + DM Sans fonts, full colour scheme, Font Awesome icons throughout |
-| Responsiveness   | CSS clamp(), media queries for 480px and 360px |
-| Code Quality     | Separated HTML/CSS/JS, commented sections, semantic markup |
-| Documentation    | This README with table of contents, structure, and design specs |
-| Branding         | "BaitAware" consistently used, favicon.png in assets + linked in HTML |
 
 ---
 
