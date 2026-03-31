@@ -14,20 +14,56 @@ Each scenario is rendered as a faithful UI mock (fake email client, SMS thread, 
 
 ## 🚀 Getting Started
 
-No build tools or server required. Simply open the project in a browser:
+Follow these steps to download and run the **BaitAware Phishing Simulator** locally.
+
+### 1. Clone the repository
+
+Open your terminal or Command Prompt and run:
 
 ```bash
-# Clone / download the project
-cd baitaware/
-
-# Open directly in your browser
-open index.html
-# OR
-double-click index.html in your file explorer
+git clone https://github.com/TshiamoRapetswa/baitaware-phishing-simulator.git
 ```
 
-> **Tip:** For the best experience use a modern browser (Chrome, Firefox, Safari, Edge).
+### 2. Navigate to the project folder
 
+```bash
+cd baitaware-phishing-simulator
+```
+
+### 3. Open the simulator
+
+No installation, build tools, or server setup is required.
+
+Simply open the main file in your browser:
+
+```bash
+open index.html
+```
+
+Alternatively, you can:
+
+- Navigate to the project folder
+- Double-click **index.html**
+- The simulator will open in your default web browser
+
+### Alternative: Download ZIP
+
+If you prefer not to use Git:
+
+1. Go to the repository on GitHub
+2. Click **Code**
+3. Select **Download ZIP**
+4. Extract the files
+5. Open **index.html** in your browser
+
+---
+
+## ⚠️ Disclaimer
+
+This project is intended for **educational and cybersecurity awareness purposes only**.
+
+It simulates phishing techniques to help users recognize and avoid phishing attacks.  
+Do **not** use this project for malicious, deceptive, or unauthorized activities.
 ---
 
 ## 📂 Folder Structure
