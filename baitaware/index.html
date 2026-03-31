@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BaitAware — Phishing Detection Quiz</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════ SPLASH SCREEN ══════════════ -->
+  <div id="splash" class="screen active">
+    <div class="splash-bg">
+      <div class="scan-line"></div>
+    </div>
+    <div class="splash-content">
+      <img src="assets/logo.png" alt="BaitAware Logo" class="splash-logo" />
+      <p class="splash-tagline">Can you spot the bait?</p>
+      <p class="splash-sub">10 real-world scenarios. One mission: don't get hooked.</p>
+      <button id="startBtn" class="btn btn-primary btn-large">
+        <i class="fa-solid fa-fish-fins"></i> Start the Challenge
+      </button>
+      <div class="splash-stats">
+        <div class="stat"><span>10</span><small>Scenarios</small></div>
+        <div class="stat"><span>4</span><small>Categories</small></div>
+        <div class="stat"><span>∞</span><small>Awareness</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ QUIZ SCREEN ══════════════ -->
+  <div id="quiz" class="screen">
+    <!-- Header -->
+    <header class="quiz-header">
+      <div class="header-logo">
+        <img src="assets/favicon.png" alt="icon" class="header-icon" />
+        <span class="header-brand">BaitAware</span>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-bar-track">
+          <div id="progressBar" class="progress-bar-fill"></div>
+        </div>
+        <span id="progressLabel" class="progress-label">1 / 10</span>
+      </div>
+      <div class="score-badge">
+        <i class="fa-solid fa-star"></i>
+        <span id="liveScore">0</span>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <main class="quiz-main">
+      <div id="scenarioCard" class="scenario-card">
+
+        <!-- Category badge -->
+        <div id="categoryBadge" class="category-badge">
+          <i id="categoryIcon" class="fa-solid fa-envelope"></i>
+          <span id="categoryLabel">Email</span>
+        </div>
+
+        <!-- Scenario mock -->
+        <div id="scenarioMock" class="scenario-mock"></div>
+
+        <!-- Question -->
+        <div class="question-block">
+          <p id="questionText" class="question-text">Is this communication safe or a phishing attempt?</p>
+        </div>
+
+        <!-- Choice buttons -->
+        <div id="choiceButtons" class="choice-buttons">
+          <button id="safeBtn" class="btn btn-safe" data-choice="safe">
+            <i class="fa-solid fa-shield-check"></i> Safe
+          </button>
+          <button id="phishBtn" class="btn btn-phish" data-choice="phishing">
+            <i class="fa-solid fa-fish-fins"></i> Phishing
+          </button>
+        </div>
+
+        <!-- Feedback panel (hidden until answered) -->
+        <div id="feedbackPanel" class="feedback-panel hidden">
+          <div id="feedbackIcon" class="feedback-icon"></div>
+          <div class="feedback-body">
+            <p id="feedbackResult" class="feedback-result"></p>
+            <p id="feedbackExplanation" class="feedback-explanation"></p>
+            <ul id="feedbackClues" class="feedback-clues"></ul>
+          </div>
+          <button id="nextBtn" class="btn btn-next">
+            Next <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ══════════════ RESULTS SCREEN ══════════════ -->
+  <div id="results" class="screen">
+    <div class="results-content">
+      <img src="assets/logo.png" alt="BaitAware Logo" class="results-logo" />
+      <div id="scoreCircle" class="score-circle">
+        <svg viewBox="0 0 120 120">
+          <circle class="track" cx="60" cy="60" r="52"/>
+          <circle id="scoreArc" class="arc" cx="60" cy="60" r="52"/>
+        </svg>
+        <div class="score-text">
+          <span id="finalScore">0</span>
+          <small>/10</small>
+        </div>
+      </div>
+      <h2 id="scoreTitle" class="score-title"></h2>
+      <p id="scoreMessage" class="score-message"></p>
+
+      <!-- Per-question review -->
+      <div id="reviewList" class="review-list"></div>
+
+      <div class="results-actions">
+        <button id="retryBtn" class="btn btn-primary">
+          <i class="fa-solid fa-rotate-right"></i> Try Again
+        </button>
+        <button id="shareBtn" class="btn btn-outline">
+          <i class="fa-solid fa-share-nodes"></i> Share Score
+        </button>
+      </div>
+
+      <p class="results-tip"><i class="fa-solid fa-lightbulb"></i> Stay vigilant — phishing attacks are getting smarter every day.</p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
