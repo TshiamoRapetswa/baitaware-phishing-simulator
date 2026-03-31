@@ -10,6 +10,12 @@
 
 Each scenario is rendered as a faithful UI mock (fake email client, SMS thread, browser window, or social feed), giving the user the same visual context they'd experience in the real world.
 
+## 🌐 Live Demo
+
+Try the simulator here:
+
+👉 https://baitaware-phishing-simulator-svzo.vercel.app/
+
 ---
 
 ## 🚀 Getting Started
